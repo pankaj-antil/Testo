@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+<script language="JavaScript" type="text/javascript">
+
+function logincall(){
+	
+		var hr=new XMLHttpRequest();
+
+		var url="logincall.php";
+						
+
+		
+		var username=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+		
+		var vars="username="+username+"&password="+password;
+
+          hr.open("POST",url,true);
+		  				
+
+		hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		
+		
+		hr.onreadystatechange = function(){
+				if(hr.readyState==4 && hr.status==200){
+					var return_data=hr.responseText;
+					document.getElementById("ajaxDiv").innerHTML=return_data;
+					/*
+					var hr2=new XMLHttpRequest();
+					var url2="home.php";
+					var vars2="username="+return_data;
+					hr2.open("POST",url2,true);
+					hr2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					hr2.send(vars);*/
+					if(return_data!='wrong'){
+					url3='home.php?username='+return_data;
+					window.location.href=url3;
+					}
+					else{
+							document.getElementById("ajaxDiv").innerHTML="wrong combination";	
+					}
+				}
+		}
+		hr.send(vars);
+		document.getElementById("ajaxDiv").innerHTML="processing.....................";	
+}
+
+
+</script>
+</head>
+<body>
+
+<script type="text/javascript" src="js/fblogin.js"></script>
+<div id="log"></div>   
+<!-- for fb like and share <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>-->
+   
+<form>
+<link rel="stylesheet" href="css/login.css">
+<img src="img/rsz_1testo.png" alt="Testo Icon" class="logo">
+<div id="ajaxDiv"></div>
+<fieldset>
+<button type="button" value="button4" name="button4" class="button4" onclick="location.href='signup.html'">Sign Up</button>
+<button type="button" autofocus value="button5" name="button5" class="button5" onclick="return false" >Log In</button>
+
+<input  name="username" type="text" placeholder="Username or email" id="username"></input></br>
+<input  name="password" type="password" placeholder="Password" id="password"></input></br>
+<input type="checkbox" name="remember" value="remember">Remember me <a href="www.css.com">Forgot Password?</a></br>
+<button type="button" value="button1" name="button1" class="button1" onclick="javascript:logincall()">Log In</button><hr class="style1"></br>
+<label for="login"> Or connect with</label><br>
+<button type="button" value="button2" name="button2" class="button2" onclick="javascript:login()">Log In using facebook</button>
+<button type="button" value="button3" name="button3" class="button3" onclick="javascript:getInfo()">Log In using google</button>
+</fieldset>
+</form>
+</body>
+</html>

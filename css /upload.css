@@ -1,0 +1,188 @@
+
+body{
+	background-color:WhiteSmoke;
+}
+p{
+	padding-left:50px;
+	padding-top:0px;
+	padding-bottom:-4px;
+	font-size: 24px;
+	color: DimGrey;
+}
+.dropdown{
+    display:inline-block;
+    position:relative;
+}
+.select:hover{
+	background-color: white;
+	color: darkgrey;
+	border: dimgrey solid 1px;
+	cursor:pointer;
+}
+#header{
+
+}
+li {
+    position:relative;
+    margin:0;
+    display:block;
+}
+ul {
+    position:relative;
+    top:0;
+    left:200px; /* make this equal to the width of the sub nav above */
+    margin:0;
+}
+.sub-menu {
+    display:none;
+}
+.logo{
+	margin-left:70px;
+}
+.normal{
+	float:right;
+	width:100px;
+	margin-left:40px;
+	margin-top:0px;
+    background-color: darkgrey;
+    border: dimgrey solid 1px;
+    color: white;
+    padding: 6px 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+	 box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 6px 7px 0 rgba(0,0,0,0.19);
+}
+.normal:hover{
+	background-color: white;
+	color: darkgrey;
+	border: dimgrey solid 1px;
+	cursor:pointer;
+}
+#bottom{
+	float:bottom;
+	margin-bottom:30px;
+}
+#choose{
+	padding-top:14px;
+	height:54px;
+}
+#content{
+	height:396px;
+	overflow:auto;
+	border: dimgrey solid 1px;
+	padding-bottom:0px;
+	padding-left:20px;
+	padding-top:20px;
+}
+.soption:hover{
+	background-color: darkgrey;
+	color:white;
+}
+.question{
+	padding-bottom:0px;
+	padding-right:20px;
+}
+.select{
+	margin-right:30px;
+	color:white;
+	padding-bottom:6px;
+	padding-left:10px;
+	padding-top:6px;
+	padding-right:10px;
+    background-color: darkgrey;
+    border: dimgrey solid 1px;
+	 box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 6px 7px 0 rgba(0,0,0,0.19);
+}
+#submit{
+	margin-bottom:20px;
+	margin-top:10px;
+}
+hr{
+	color:lightgrey;
+	border-color:lightgrey;
+	background-color:lightgrey;
+	margin-top:20px;
+}
+.formdiv{
+	margin-top:10px;
+}
+input[type=radio]{
+	margin-left:20px;
+}
+form{
+	display:inline-block;
+}
+#user{
+	float:right;
+	margin-top:40px;
+	margin-right:100px;
+    background-color: darkgrey;
+    border: dimgrey solid 1px;
+    color: white;
+	padding-bottom:10px;
+    padding-top:10px;
+	padding-left:10px;
+	padding-right:40px;
+    text-align: right;
+    text-decoration: none;
+    font-size: 16px;
+	 box-shadow: 0 8px 6px 0 rgba(0,0,0,0.2), 0 6px 7px 0 rgba(0,0,0,0.19);
+	 background-image: url('../img/arrow.png');
+	 background-repeat: no-repeat;
+	 background-position: right 6px;
+}
+#user:hover{
+	background-color: white;
+	color: darkgrey;
+	border: dimgrey solid 1px;
+	background-image: url('../img/arrowh.png');
+	cursor:pointer;
+	background-position: right 8px;
+}
+.right{
+	float:right;
+}
+.quesArea{
+	width:100%;
+}
+textarea{
+	padding-left:14px;
+	background-color:whitesmoke;
+	color:dimgrey;
+}
+#main{
+	background-image:url('../img/grey.png');
+	height:546px;
+	margin-left:50px;
+	margin-right:50px;
+	padding-left:50px;
+	padding-right:0px;
+	margin-top:4px;
+	border: dimgrey solid 1px;
+	padding-bottom:0px;
+}
+.instruction{
+	display:inline-block;
+	float:right;
+}
+.option{
+	display:inline-block;
+	width:40%;
+}
+textarea::-webkit-input-placeholder { /* WebKit browsers */
+    color:    dimgrey;
+	font-style:italic;
+}
+textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color:    dimgrey;
+    font-style:italic;
+}
+textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+color:    dimgrey;
+    font-style:italic;
+}
+textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+color:    dimgrey;
+	font-style:italic;
+}

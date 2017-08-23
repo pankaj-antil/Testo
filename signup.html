@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup Page</title>
+<script language="JavaScript" type="text/javascript">
+
+function signupcall(){
+	
+		var hr=new XMLHttpRequest();
+
+		var url="signupcall.php";
+						
+
+		var name=document.getElementById("name").value;
+		var username=document.getElementById("email").value;
+        var password=document.getElementById("password").value;
+		
+		var vars="name="+name+"&username="+username+"&password="+password;
+
+          hr.open("POST",url,true);
+		  				
+
+		hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		document.getElementById("ajaxDiv").innerHTML="processing.....................";	
+		
+		hr.onreadystatechange = function(){
+				if(hr.readyState==4 && hr.status==200){
+					var return_data=hr.responseText;
+					document.getElementById("ajaxDiv").innerHTML=return_data;
+				}
+		}
+		hr.send(vars);
+}
+
+
+</script>
+</head>
+<body>
+<script type="text/javascript" src="js/fblogin.js"></script>
+<div id="log"></div> 
+<form>
+<link rel="stylesheet" href="css/signup.css">
+<img src="img/rsz_1testo.png" alt="Testo Icon" class="logo">
+<div id="ajaxDiv"></div>
+<fieldset>
+<button type="button" autofocus value="button4" name="button4" class="button4" onclick="return false">Sign Up</button>
+<button type="button"  value="button5" name="button5" class="button5" onclick="location.href='login.html'"  >Log In</button>
+<input  name="name" type="text" placeholder="First and Last Name" id="name"></input></br>
+<input  name="username" type="text" placeholder="Email" id="email"></input></br>
+<input  name="password" type="password" placeholder="Password" id="password"></input></br>
+<button type="button" value="button1" name="button1" class="button1" onclick="javascript:signupcall()">Create An Account</button><hr class="style1"></br>
+
+
+<label for="login"> Or connect with</label><br>
+<button type="button" value="button2" name="button2" class="button2" onclick="javascript:login()">Log In using facebook</button>
+<button type="button" value="button3" name="button3" class="button3">Log In using google</button>
+</fieldset>
+</form>
+</body>
+</html>

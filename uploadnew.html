@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload</title>
+<link rel="stylesheet" type="text/css" href="css/upload.css">
+</head>
+<body>
+<div id="header">
+<img src="img/rsz_1testo.png" alt="Testo Icon" class="logo">
+<button id="user";type="button";onclick="showdropdown()">Sahil56</button>
+</div>
+<form  method="post">
+<div id="main">
+<div id="choose">
+<select class="select" name="topic">
+  <option value=" disabled selected">Choose Topic</option>
+  <option class="soption"  value="c">C</option>
+  <option class="soption"  value="c++">C++</option>
+  <option class="soption"  value="java">Java</option>
+  <option class="soption"  value="python">Python</option>
+</select>
+<select class="select" name="contest">
+  <option value="disabled selected">Choose Sub-topic</option>
+  <option class="soption" value="arrays">Array</option>
+  <option class="soption" value="pointers">Pointers</option>
+  <option class="soption" value="loops">Loops</option>
+  <option class="soption" value="conditions">Conditions</option>
+</select>
+<i class="instruction">[You must fill up all 10 questions.]</i>
+</div>
+
+<div id="content">
+
+<script type="text/javascript">
+function table()
+{
+    var value = document.getElementById("content").value;
+	var content=document.getElementById("content");
+	var i;
+    for(i=1;i<=10;i++){
+	content.innerHTML=("here"+<div class="question">
+<div>
+<textarea rows="4" placeholder="1. Enter Question..." class="quesArea" name="1"></textarea>
+</div>
+<textarea class="option" rows="2" placeholder="Option A..." name="1A"></textarea>
+<textarea class="right option" rows="2" placeholder="Option B..." name="1B"></textarea>
+<textarea class="option" rows="2" placeholder="Option C..." name="1C"></textarea>
+<textarea class="right option" rows="2" placeholder="Option D..." name="1D"></textarea>
+<div class="formdiv">
+Correct Option : 
+
+  <input type="radio" name="1q" value="a">A |
+  <input type="radio" name="1q" value="b">B |
+  <input type="radio" name="1q" value="c">C |
+  <input type="radio" name="1q" value="d">D |
+
+</div>
+<hr>
+</div>);		
+
+	}
+   
+    }
+</script>
+
+
+<div id="bottom">
+<button class="normal" id="submit";type="button">Submit</button>
+</div>
+</div>
+</form>
+<button id="test" onclick="table()">test</button>
+</div>
+</body>
+</html>
